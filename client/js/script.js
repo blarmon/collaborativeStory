@@ -2,7 +2,7 @@ $(document).ready(function(){
     
     var socket = io.connect();
     socket.on('populate_messages', function(data) {
-       $('#story').append(data.fragment + ' ');
+       $('#story').append('<li class=piece>' + data.fragment + ' ');
      }); 
     
   $('form').submit(function(){
@@ -13,7 +13,7 @@ $(document).ready(function(){
   
   socket.on('submit', function(data){
       
-      $('#story').append(data.submit + " ");
+      $('#story').append('<li class=piece>' + data.submit + ' ');
   });
   
 });

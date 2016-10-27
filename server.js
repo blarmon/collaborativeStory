@@ -9,6 +9,9 @@ var server = http.createServer(router);
 var io = socketio.listen(server);
 
 router.use(express.static(path.resolve(__dirname, 'client')));
+router.get('/about', function(req, res){
+  res.sendfile('client/about.html');
+});
 var story = ["once upon a time:"];
 
 
@@ -16,7 +19,7 @@ io.on('connection', function (socket) {
     
     for (var i in story) {
       socket.emit('populate_messages', { fragment: story[i] } );
-    }
+    };
     
     socket.on('submission', function(data){
     story.push(data);

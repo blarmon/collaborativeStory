@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" ng-app>
   <head>
-    <title>Chat Example</title>
+    <title>story page - collab story</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
@@ -13,10 +13,26 @@
       body {
         padding-top: 60px;
       }
+      li {
+        display: inline;
+      }
+      #story li:nth-child(odd) {
+        background-color: #95ea3a;
+      }
     </style>
   </head>
   <body>
-    
+     <header class="navbar navbar-fixed-top navbar-inverse">
+         <div class="container">
+            <nav>
+                <ul class="nav navbar-nav navbar-right">
+                 <li><a href="/">1st story</a></li>
+                  <li><a href="about">about the site</a></li>
+                  <li><a href="#">Log In!</a></li>
+                </ul>
+            </nav>
+         </div>
+        </header>
     <h1>ok here's the story:</h1>
     <ul id='story'></ul>
     

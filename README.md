@@ -3,6 +3,8 @@ a fun collaborative story builder app.
 main objective: crowdsource reasonably good stories
 
 todo:
+ - react header :/
+- create a react component that is a story page, inject relevant info thru props
 - pretty much everything right now.
 - MOSCOW
 - create a wireframe etc for how these pages should look.
